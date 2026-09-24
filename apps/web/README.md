@@ -13,4 +13,4 @@ Choose **Try Demo** on the landing page. It uses the sample adapter and needs no
 
 The existing scripts include `build`, `lint` and `preview`; run them when explicitly requested by the operator. The maintainer reviews UI changes through the dev server.
 
-The App Engine configuration expects `dist/`. For a cloud build, the root `cloudbuild.web.yaml` installs and builds only this app, then deploys to the explicitly selected GCP project. It builds demo mode without production credentials. Hosting costs belong to the operator.
+The App Engine configuration expects `dist/`. For a cloud build, the root `cloudbuild.web.yaml` installs and builds only this app, then deploys a preview with no live traffic to the explicitly selected GCP project. Follow [the deployment guide](../../docs/DEPLOYMENT.md) to review and promote it. It builds demo mode without production credentials. Hosting costs belong to the operator.

@@ -11,7 +11,7 @@ destination.mkdir(parents=True)
 excluded_dirs={'.git','node_modules','Pods','build','dist','.expo','.idea','.vscode','.claude','__pycache__','.venv','venv','_archive','xcuserdata','DerivedData','results','data','models','demo-videos','.ipynb_checkpoints'}
 allowed_suffixes={'.ts','.tsx','.js','.jsx','.cjs','.mjs','.json','.md','.txt','.py','.ipynb','.sql','.toml','.yaml','.yml','.html','.css','.scss','.svg','.png','.jpg','.jpeg','.webp','.ico','.mp4','.swift','.m','.h','.plist','.pbxproj','.xcworkspacedata','.xcscheme','.storyboard','.xcprivacy','.xcconfig','.entitlements','.lock','.example','.gradle','.properties','.sh','.rb','.xml','.kt','.java','.env','.gitignore','.gcloudignore','.bat','.ps1'}
 special_names={'LICENSE','Podfile','Gemfile','gradlew','.gitignore','.gcloudignore','.xcode.env'}
-root_files=['README.md','LICENSE','AGENTS.md','CONTRIBUTING.md','SECURITY.md','.gitignore','cloudbuild.web.yaml']
+root_files=['README.md','LICENSE','AGENTS.md','CONTRIBUTING.md','SECURITY.md','.gitignore','.gcloudignore','cloudbuild.web.yaml']
 
 def permitted(p):
     rel=p.relative_to(source)

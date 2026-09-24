@@ -1,4 +1,6 @@
-# Submit from the repository root with an explicit --project.
+# Run scripts/deploy-web.sh from a clean checkout; review the preview before promotion.
+substitutions:
+  _VERSION: community-preview
 steps:
   - name: node:22
     dir: apps/web
@@ -11,5 +13,7 @@ steps:
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk:slim
     dir: apps/web
     entrypoint: gcloud
-    args: ['app', 'deploy', 'app.yaml', '--project=$PROJECT_ID', '--quiet']
+    args: ['app', 'deploy', 'app.yaml', '--project=$PROJECT_ID', '--version=${_VERSION}', '--no-promote', '--no-stop-previous-version', '--quiet']
+options:
+  logging: CLOUD_LOGGING_ONLY
 timeout: 1200s

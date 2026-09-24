@@ -16,6 +16,6 @@ Use `AGENTS.md` and the per-app guides when changing code. The maintainer owns r
 
 ## Hosting
 
-Host your own copy using a cloud project and domain you control. Publishing source to GitHub and deploying an application are separate actions.
+To host your own copy, follow [the deployment guide](DEPLOYMENT.md) using your own cloud project and domain. Publishing source to GitHub and deploying an application are separate actions.
 
 The web deployment builds the sample workspace without production credentials. Review the preview before sending live traffic to a new version. Keep account details, environment configuration and operational notes outside the public repository.

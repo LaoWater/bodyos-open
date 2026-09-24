@@ -1,38 +1,5 @@
-# ============================================================
-# Google App Engine — Static SPA Deployment (Vite/React)
-# ============================================================
-#
-# PREREQUISITES (run once per new GCP project):
-#   1. gcloud auth login
-#   2. gcloud config set project <PROJECT_ID>
-#   3. gcloud app create --region=<REGION>
-#      (europe-west1 = Belgium, us-central = Iowa, etc.)
-#      WARNING: region is PERMANENT — cannot be changed after creation
-#   4. gcloud services enable cloudbuild.googleapis.com --project=<PROJECT_ID>
-#   5. gsutil iam ch serviceAccount:<PROJECT_ID>@appspot.gserviceaccount.com:admin \
-#        gs://staging.<PROJECT_ID>.appspot.com
-#      (the staging bucket is auto-created by step 3, step 5 grants deploy access)
-#
-# BUILD & DEPLOY:
-#   npm run build && gcloud app deploy app.yaml --project=<PROJECT_ID>
-#
-# SUBSEQUENT DEPLOYS (skip confirmation prompt):
-#   npm run build && gcloud app deploy app.yaml --project=<PROJECT_ID> --quiet
-#
-# VIEW LIVE SITE:
-#   gcloud app browse --project=<PROJECT_ID>
-#   URL pattern: https://<PROJECT_ID>.<REGION_CODE>.r.appspot.com
-#
-# NOTES:
-#   - This config serves a PRE-BUILT static site from dist/
-#   - No server process runs — App Engine only serves static files
-#   - .gcloudignore must NOT ignore dist/ (that's what gets served)
-#   - .gcloudignore SHOULD ignore node_modules/, src/, etc.
-#   - min_instances: 0 = scale to zero = free when idle
-#   - F1 instance class is free-tier eligible (28 hrs/day)
-# ============================================================
-
-runtime: nodejs20
+# Static web assets from dist/. Deployment: docs/DEPLOYMENT.md
+runtime: nodejs22
 instance_class: F1
 
 env_variables:

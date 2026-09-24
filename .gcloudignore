@@ -1,0 +1,13 @@
+# Cloud Build receives only the web source and its build configuration.
+*
+!cloudbuild.web.yaml
+!apps/
+apps/*
+!apps/web/
+!apps/web/**
+apps/web/node_modules/
+apps/web/dist/
+apps/web/.git/
+apps/web/.env
+apps/web/.env.*
+apps/web/public/media/demo-videos/
