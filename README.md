@@ -4,7 +4,7 @@ A gift from [MGLO Software](https://mglo-software.com) to the fitness community.
 
 A web workspace, a mobile training app, native iOS pose detection, a Supabase data foundation and the Python research behind the movement work. Take the parts you need, adapt them to your practice, and share what you learn.
 
-[Explore the demo](https://bodyox.ey.r.appspot.com/) · [Start here](docs/START_HERE.md) · [Customize with an agent](docs/CUSTOMIZE.md) · [Contribute](CONTRIBUTING.md)
+[Explore the demo](https://bodyos-open.com/) · [Start here](docs/START_HERE.md) · [Customize with an agent](docs/CUSTOMIZE.md) · [Contribute](CONTRIBUTING.md)
 
 ## Try the web app
 
