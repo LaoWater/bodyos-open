@@ -254,7 +254,7 @@ export const fetchConversation = async (id: string): Promise<Conversation | null
   };
 };
 
-export const sendMessage = async (conversationId: string, content: string): Promise<Message> => {
+export const sendMessage = async (_conversationId: string, _content: string): Promise<Message> => {
   // TODO: Wire to AI backend (OpenAI via Edge Function)
   return {
     id: generateId(),

@@ -5,7 +5,7 @@ import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { useAppModeStore } from '@/stores/appModeStore';
 import { useAuthStore } from '@/stores/authStore';
 import { cn } from '@/lib/utils';
-import { Loader2, ArrowLeft, AlertCircle, CheckCircle, Mail } from 'lucide-react';
+import { Loader2, ArrowLeft, AlertCircle, Mail } from 'lucide-react';
 
 // ─── OAuth SVG Icons ──────────────────────────────────────────
 function GoogleIcon({ className }: { className?: string }) {

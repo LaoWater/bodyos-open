@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router';
 import { supabase } from '@/lib/supabase';
-import { useAuthStore } from '@/stores/authStore';
 import { useAppModeStore } from '@/stores/appModeStore';
 import { Loader2, CheckCircle, XCircle } from 'lucide-react';
 
