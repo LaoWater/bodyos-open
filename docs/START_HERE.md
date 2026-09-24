@@ -1,6 +1,6 @@
 # Start with the part you need
 
-**I want to see it.** Run the web commands in the root README and choose Try Demo. Sample scores and people illustrate the interface.
+**I want to see it.** Run `node scripts/start-web.mjs` for a guided start, or the web commands in the root README and choose Try Demo. Sample scores and people illustrate the interface.
 
 **I want it for my practice.** Follow [Customize](CUSTOMIZE.md). Begin with your name, colours and exercise copy. Keep sample data while you decide what you need.
 
