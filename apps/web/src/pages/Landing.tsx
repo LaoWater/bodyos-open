@@ -552,7 +552,7 @@ export default function Landing() {
               How It Works
             </h2>
             <p className="text-text-secondary max-w-md mx-auto">
-              From download to data-driven training in minutes
+              Explore the demo, choose your starting point, and make it yours
             </p>
           </motion.div>
 
@@ -600,15 +600,15 @@ export default function Landing() {
               Deep Analysis on Web
             </h2>
             <p className="text-text-secondary max-w-xl mx-auto">
-              Your mobile app captures the data. The web platform lets you dive deep — frame-by-frame video analysis, progress dashboards, and training insights.
+              Explore session analysis, progress dashboards and workout planning in the sample web workspace.
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-5">
             {[
-              { icon: <BarChart3 className="w-6 h-6" />, title: 'Session Replay', description: 'Frame-by-frame video with skeleton overlay. See exactly what your body does on every rep.' },
+              { icon: <BarChart3 className="w-6 h-6" />, title: 'Session Replay', description: 'Explore sample form scores, movement breakdowns and the session review interface.' },
               { icon: <TrendingUp className="w-6 h-6" />, title: 'Progress Dashboard', description: 'Posture score trends, training consistency charts, and body checkpoint comparisons over time.' },
-              { icon: <Dumbbell className="w-6 h-6" />, title: 'Workout Planning', description: 'Build and manage training plans. Log sets, track RPE, and let the coach adjust your programming.' },
+              { icon: <Dumbbell className="w-6 h-6" />, title: 'Workout Planning', description: 'Explore training plans, exercise logs and RPE tracking, ready to adapt to your practice.' },
             ].map((item, i) => (
               <motion.div
                 key={item.title}
