@@ -14,7 +14,7 @@ import { AnalysisOrbit } from '@/components/features/AnalysisOrbit';
 
 // ─── Data ────────────────────────────────────────────────────
 
-const SOURCE = 'https://github.com/LaoWater/bodyos';
+const SOURCE = 'https://github.com/LaoWater/bodyos-open';
 const features = [
   {pillar:'SEE', icon:<Eye className="w-7 h-7"/>, title:'Movement, made visible.', description:'Native iOS camera work meets on-device MediaPipe pose detection. Follow 33 landmarks through a movement and explore geometric form cues.', color:'#5B7CFA', gradient:'from-accent-primary to-accent-primary/40', details:['Swift camera integration and React Native screens','Landmark coordinates and skeleton drawing','Joint-angle and movement analysis source','Your starting point for exercise-specific feedback']},
   {pillar:'LEARN', icon:<Brain className="w-7 h-7"/>, title:'A workspace around the person.', description:'A web interface for sessions, body checkpoints and workout planning, with a sample workspace you can explore immediately.', color:'#4ECDC4', gradient:'from-accent-secondary to-accent-secondary/40', details:['Session and checkpoint interfaces','Demo and real data adapters','Supabase account and data schema','Product design you can make your own']},

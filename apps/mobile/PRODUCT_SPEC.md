@@ -1955,7 +1955,7 @@ eas submit --platform ios
 ## 📞 Support & Contact
 
 ### GitHub Issues
-Report bugs, request features: [github.com/LaoWater/bodyos/issues](https://github.com/LaoWater/bodyos/issues)
+Report bugs, request features: [github.com/LaoWater/bodyos-open/issues](https://github.com/LaoWater/bodyos-open/issues)
 
 ### Developer
 - **Name**: Raul Baciu (Neo)
