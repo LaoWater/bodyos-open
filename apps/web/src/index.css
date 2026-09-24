@@ -1,0 +1,291 @@
+@import "tailwindcss";
+
+@theme {
+  /* Backgrounds */
+  --color-bg-primary: #0E0F12;
+  --color-bg-secondary: #15171C;
+  --color-bg-tertiary: #1C1E26;
+  --color-bg-overlay: #1A1D27;
+
+  /* Accents */
+  --color-accent-primary: #5B7CFA;
+  --color-accent-secondary: #4ECDC4;
+  --color-brand-amber: #D4A574;
+
+  /* Semantic */
+  --color-success: #4ECDC4;
+  --color-warning: #F5A623;
+  --color-error: #E74C3C;
+  --color-info: #5AC8FA;
+
+  /* Text */
+  --color-text-primary: #E6E8EC;
+  --color-text-secondary: #9CA3AF;
+  --color-text-tertiary: #6B7280;
+  --color-text-disabled: #3E4A5C;
+  --color-text-inverse: #0E0F12;
+
+  /* Borders */
+  --color-border-subtle: rgba(91, 124, 250, 0.10);
+  --color-border-default: rgba(91, 124, 250, 0.18);
+  --color-border-strong: rgba(91, 124, 250, 0.30);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 4px 12px 0 rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 8px 24px 0 rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 0 20px 0 rgba(91, 124, 250, 0.25);
+  --shadow-teal-glow: 0 0 20px 0 rgba(78, 205, 196, 0.20);
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-base: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Fonts */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ─── Base ─────────────────────────────────────────────────── */
+html {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Global color transition for theme switching */
+*, *::before, *::after {
+  transition: background-color 0.35s ease, border-color 0.35s ease, color 0.25s ease, box-shadow 0.35s ease;
+}
+
+/* Exclude animations/transforms from the global transition */
+.no-theme-transition,
+.no-theme-transition *,
+input, textarea, video, canvas, svg circle, svg line {
+  transition: none;
+}
+
+/* ─── Light Mode Overrides ─────────────────────────────────── */
+[data-theme="light"] {
+  --color-bg-primary: #F7F8FA;
+  --color-bg-secondary: #FFFFFF;
+  --color-bg-tertiary: #EFF1F5;
+  --color-bg-overlay: #E8EAF0;
+
+  --color-text-primary: #1A1D27;
+  --color-text-secondary: #4B5563;
+  --color-text-tertiary: #6B7280;
+  --color-text-disabled: #9CA3AF;
+  --color-text-inverse: #E6E8EC;
+
+  --color-border-subtle: rgba(91, 124, 250, 0.08);
+  --color-border-default: rgba(91, 124, 250, 0.15);
+  --color-border-strong: rgba(91, 124, 250, 0.25);
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px 0 rgba(0, 0, 0, 0.10);
+  --shadow-glow: 0 0 20px 0 rgba(91, 124, 250, 0.12);
+  --shadow-teal-glow: 0 0 20px 0 rgba(78, 205, 196, 0.10);
+}
+
+/* ─── Scrollbar ────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(91, 124, 250, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(91, 124, 250, 0.35);
+}
+
+/* ─── Custom Utilities ─────────────────────────────────────── */
+@utility glass {
+  background: rgba(21, 23, 28, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(91, 124, 250, 0.12);
+}
+
+@utility glass-elevated {
+  background: rgba(21, 23, 28, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(91, 124, 250, 0.18);
+  box-shadow: var(--shadow-md), var(--shadow-glow);
+}
+
+/* Light mode glass */
+[data-theme="light"] .glass {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(91, 124, 250, 0.1);
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme="light"] .glass-elevated {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(91, 124, 250, 0.15);
+  box-shadow: var(--shadow-md);
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@utility shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(230, 232, 236, 0.06) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+[data-theme="light"] .shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(91, 124, 250, 0.06) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+}
+
+@utility gradient-text {
+  background: linear-gradient(135deg, #5B7CFA 0%, #4ECDC4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Focus Ring ───────────────────────────────────────────── */
+*:focus-visible {
+  outline: 2px solid var(--color-accent-primary);
+  outline-offset: 2px;
+}
+
+/* ─── Auth Page — Theme-Aware Components ─────────────────── */
+
+/* Aurora blobs */
+.auth-aurora-blob {
+  opacity: 0.08;
+}
+[data-theme="light"] .auth-aurora-blob {
+  opacity: 0.12;
+}
+
+/* Top glow pulse — the radial glow at top of form panel */
+.auth-aurora-blob + .auth-aurora-blob + .auth-aurora-blob + .auth-aurora-blob ~ div:last-child {
+  opacity: 0.06;
+}
+
+/* OAuth buttons */
+.auth-oauth-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.auth-oauth-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+[data-theme="light"] .auth-oauth-btn {
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.10);
+}
+[data-theme="light"] .auth-oauth-btn:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+/* Tab toggle */
+.auth-tab-toggle {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+[data-theme="light"] .auth-tab-toggle {
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Image panel — left edge fade */
+.auth-image-edge-fade {
+  background: linear-gradient(to right, rgba(14, 15, 18, 0.50), transparent);
+}
+[data-theme="light"] .auth-image-edge-fade {
+  background: linear-gradient(to right, rgba(247, 248, 250, 0.60), transparent);
+}
+
+/* Glass badge on image — always dark since it overlays the dark image */
+.auth-glass-badge {
+  background: rgba(14, 15, 18, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(91, 124, 250, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(91, 124, 250, 0.08);
+}
+
+/* Version pill on image — always dark */
+.auth-version-pill {
+  background: rgba(14, 15, 18, 0.50);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ─── Aurora / Auth Page Animations ───────────────────────── */
+@keyframes auroraMove1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(60px, -40px) scale(1.1); }
+  50% { transform: translate(-30px, 30px) scale(0.95); }
+  75% { transform: translate(40px, 20px) scale(1.05); }
+}
+
+@keyframes auroraMove2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(-50px, 30px) scale(1.08); }
+  50% { transform: translate(40px, -25px) scale(0.92); }
+  75% { transform: translate(-20px, -40px) scale(1.03); }
+}
+
+@keyframes auroraMove3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(45px, 35px) scale(1.06); }
+  66% { transform: translate(-35px, -20px) scale(0.97); }
+}
+
+@keyframes auroraMove4 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  30% { transform: translate(-40px, -30px) scale(1.04); }
+  60% { transform: translate(30px, 40px) scale(0.96); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.06; }
+  50% { opacity: 0.12; }
+}

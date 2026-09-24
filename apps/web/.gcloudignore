@@ -1,0 +1,24 @@
+# GCloud deploy ignore - static site (pre-built)
+# We ONLY need app.yaml + dist/ folder
+
+.gcloudignore
+.git
+.gitignore
+node_modules/
+src/
+public/
+*.DS_Store
+.env
+.env.*
+*.md
+tsconfig*.json
+vite.config.*
+eslint.config.*
+package.json
+package-lock.json
+Dockerfile.*
+setup-*.sh
+.claude/
+
+# Large demo videos exceed App Engine 32MB file limit
+dist/media/demo-videos/

@@ -1,0 +1,60 @@
+{
+  "defaults": {
+    "quality": 82,
+    "variants": ["thumb", "medium", "full"]
+  },
+  "variant_sizes": {
+    "thumb": 200,
+    "medium": 500,
+    "full": 1024
+  },
+  "images": {
+    "anterior-view.png": {
+      "variants": ["thumb", "medium", "full"],
+      "quality": 82,
+      "notes": "Body reference - displayed at 56-160px"
+    },
+    "right-side-view.png": {
+      "variants": ["thumb", "medium", "full"],
+      "quality": 82,
+      "notes": "Body reference - displayed at 56-160px"
+    },
+    "posterior-view.png": {
+      "variants": ["thumb", "medium", "full"],
+      "quality": 82,
+      "notes": "Body reference - displayed at 56-160px"
+    },
+    "left-side-view.png": {
+      "variants": ["thumb", "medium", "full"],
+      "quality": 82,
+      "notes": "Body reference - displayed at 56-160px"
+    },
+    "body-os-headquarters.png": {
+      "variants": ["medium"],
+      "quality": 70,
+      "notes": "Behind 88% dark overlay - lower quality acceptable"
+    },
+    "grey-logo-vertical.png": {
+      "variants": ["medium"],
+      "quality": 90,
+      "notes": "Has alpha channel, shown at 150x222"
+    },
+    "bodyos-blueprints-vertical.jpeg": {
+      "variants": ["full"],
+      "quality": 75,
+      "notes": "Fullscreen background at 15-20% opacity"
+    },
+    "loading-screen.png": {
+      "skip": true,
+      "notes": "Must stay PNG for app.json splash"
+    },
+    "grey-logo-cropped-square2.png": {
+      "skip": true,
+      "notes": "Must stay PNG for app.json icon"
+    },
+    "grey-logo-cropped-square.png": {
+      "skip": true,
+      "notes": "Must stay PNG for app.json adaptive icon"
+    }
+  }
+}

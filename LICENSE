@@ -1,0 +1,33 @@
+BodyOS Community License 1.0
+Copyright (c) 2026 Lao and BodyOS contributors
+
+1. Scope and acceptance
+This license applies to original BodyOS material distributed with this license (the Software), including modifications, except material explicitly identified under other terms. Exercising the rights granted below means you accept these terms. "You" includes the person or organization using the Software. The copyright holders are the Licensors.
+
+2. Permission
+Subject to these conditions, the Licensors grant you a worldwide, royalty-free, non-exclusive copyright license to use, copy, inspect, modify, run and distribute the Software and derivative works, in source or compiled form.
+
+You may use and host the Software for yourself or your organization, including a commercial gym, trainer, coaching or fitness business. Your employees, contractors and your own fitness or coaching clients may access that installation. You may charge for your fitness, training or coaching services, including services delivered online through the Software.
+
+You may pay, or be paid, for installation, customization, migration, maintenance, training and support for a permitted user. Such services must not be a disguised sale of software licenses or access to a software product.
+
+3. Restrictions
+You may not sell, rent, sublicense for a fee, or charge for distributing the Software or a derivative work. You may not offer the Software or a derivative work to third parties as a paid software product, white-label software platform, or hosted software service that competes with distribution or hosting of BodyOS itself. In particular, selling software access to other gyms or coaches is not permitted. The permission for your own fitness or coaching clients in section 2 remains explicit and takes precedence over this restriction.
+
+You may share the Software and your modifications free of charge. Include this license and existing copyright, attribution and third-party notices. Identify substantial modifications. Recipients must receive the same permissions and restrictions for the BodyOS-derived material. No additional restriction may prevent their exercise of this license. Independently developed material that is merely used with the Software is not covered by this requirement.
+
+Other commercial arrangements require separate written permission from the relevant copyright holders.
+
+4. Contributions and names
+Unless separately agreed in writing, a contribution intentionally submitted for inclusion in BodyOS is offered under this license. Submit only material you have the right to contribute. No trademark right or right to imply endorsement is granted. Identify modified versions so users can distinguish them from the original project.
+
+5. Termination
+Your rights terminate if you materially breach these conditions. They are reinstated if you cure the breach within 30 days of first becoming aware of it, unless a Licensor has previously terminated your rights for a breach. Rights granted to compliant recipients are not terminated by your breach.
+
+6. No warranty or liability
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE LICENSORS ARE NOT LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM THE SOFTWARE OR ITS USE, WHETHER IN CONTRACT, TORT OR OTHERWISE.
+
+7. Existing and third-party rights
+This license does not withdraw or restrict any rights already granted for earlier copies under the MIT License or any other license. Separately licensed dependencies, models and assets keep their own terms. A copy of the historical MIT notice is preserved in docs/licenses/PRIOR-MIT.txt. These community terms apply only to rights the Licensors can grant.
+
+This is a source-available license. Its resale restrictions mean it is not an OSI-approved open-source license.

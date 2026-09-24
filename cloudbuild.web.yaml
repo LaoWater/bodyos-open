@@ -1,0 +1,15 @@
+# Submit from the repository root with an explicit --project.
+steps:
+  - name: node:22
+    dir: apps/web
+    entrypoint: npm
+    args: ['ci']
+  - name: node:22
+    dir: apps/web
+    entrypoint: npm
+    args: ['run', 'build']
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk:slim
+    dir: apps/web
+    entrypoint: gcloud
+    args: ['app', 'deploy', 'app.yaml', '--project=$PROJECT_ID', '--quiet']
+timeout: 1200s
